@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>惊喜生日祝福</title>
+<style>
+  body { font-family: Arial, sans-serif; }
+  #background { display: none; }
+</style>
+</head>
+<body>
+<h1>请输入妈妈的生日：</h1>
+<input type="text" id="inputBirthday">
+<button onclick="showGift()">提交</button>
+<div id="background"></div>
+
+<script>
+function showGift() {
+  var birthday = document.getElementById('inputBirthday').value;
+  var backgroundDiv = document.getElementById('background');
+  if (birthday === '0913') {
+    backgroundDiv.style.display = 'block';
+    backgroundDiv.innerHTML = '<img src="mom.jpg" alt="Mom" style="width:100%;"><p>生日礼物：剃须刀</p>';
+  } else {
+    alert('请输入正确的生日！');
+  }
+}
+</script>
+
+</body>
+</html>
